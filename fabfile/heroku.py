@@ -18,7 +18,7 @@ __all__ = []
 def get_hash(env):
     # print(red("CHECKING OUT BRANCH: {}".format(APP_INFO[env]["branch_name"])))
     # local('git checkout {}'.format(APP_INFO[env]["branch_name"]))
-    return local('git rev-parse HEAD', capture=True).strip()[:20]
+    return local('git rev-parse HEAD', capture=True).strip()
 
 
 def get_heroku_asset_version(env):
