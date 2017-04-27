@@ -4,6 +4,8 @@ ADD ./fabfile /usr/fabfile
 
 CMD easy_install pdbpp && pip install -U -r /usr/app/django/requirements/production.txt
 
+RUN apt-get install binutils libproj-dev gdal-bin
+
 RUN pip install Fabric3==1.13.1.post1
 
 RUN cd /tmp && \
